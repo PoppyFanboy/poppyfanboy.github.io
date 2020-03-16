@@ -1,4 +1,12 @@
 <nav>
-    <a href="/" {% if page.url == "/" %}style="background-color: powderblue;"{% endif %}>Home</a> |
-    <a href="/about/"{% if page.url == "/about/" %}style="background-color: powderblue;"{% endif %}>About</a>
+    {% assign navHrefs = "" | split: "" %}
+    {% for item in site.data.navigation %}
+        {% capture link %}
+            <a href="{{ item.link }}" {% if page.url == item.link %}class="navigation_selected"{% endif %}>{{ item.name }}</a>
+        {% endcapture %}
+        {% assign navHrefs = navHrefs | push: link %}
+    {% endfor %}
+
+    [ {{ navHrefs | join: " | " }} ]
 </nav>
+

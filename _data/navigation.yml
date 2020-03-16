@@ -1,0 +1,11 @@
+- name: home
+  link: /
+
+- name: doges
+  link: /doges/
+
+- name: cates
+  link: /cates/
+
+- name: about
+  link: /about/
