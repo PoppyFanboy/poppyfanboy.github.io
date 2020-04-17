@@ -1,6 +1,6 @@
 ---
 layout: post
-author: PoppyFanboy
+categories: [Systems of linear equations]
 ---
 ## The geometry of linear equations
 

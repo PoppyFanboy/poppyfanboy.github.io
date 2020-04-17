@@ -1,6 +1,6 @@
 ---
 layout: post
-author: PoppyFanboy
+categories: [Java Collections]
 ---
 
 *core java — part `I`, chapters 9.4–9.6* 

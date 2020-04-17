@@ -1,6 +1,6 @@
 ---
 layout: post
-author: PoppyFanboy
+categories: [Jekyll]
 ---
 
 ## Какие-то базовые штуки

@@ -1,6 +1,6 @@
 ---
 layout: post
-author: PoppyFanboy
+categories: [Linear Algebra - Основные определения]
 ---
 
 ## Арифметика целых чисел
