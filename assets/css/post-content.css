@@ -57,6 +57,19 @@
     font-style: italic;
 }
 
+/* TOC will point to the ::before pseudo-element, 50px higher in other words,
+   so that the sticky thingy at the top of the screen would not obstruct
+   the heading. */
+
+.post-content-wrapper :is(h1, h2, h3, h4, h5, h6)::before {
+    display: block;
+    content: " ";
+    margin-top: -50px;
+    height: 50px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* lists */
 
 .post-content-wrapper ul:not(.toc-submenu),

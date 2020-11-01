@@ -37,7 +37,7 @@ html[data-theme="dark"] {
     --post-author-color: tomato;
     --post-number-color: #34BB62;
     
-    --code-comment-color: #ccc;
+    --code-comment-color: #999;
     --code-keyword-color: tomato;
     --code-const-color: tomato;
     --code-string-literal-color: #34BB62;
