@@ -1,6 +1,6 @@
 ---
-layout: post
-categories: [Systems of linear equations]
+layout: post-page
+categories: [Learn, Systems of linear equations]
 ---
 ## The geometry of linear equations
 

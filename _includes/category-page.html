@@ -1,0 +1,16 @@
+<ul class="posts-list">
+    {% for category in site.categories %}
+        {% if category[0] == include.categoryName %}
+            {% assign posts = category[1] %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign postNumber = posts.size %}
+    {% for post in posts %}
+        <li>
+            {% assign postDate = post.date | date: "%b %d, %Y" %}
+            {% include post.html content=post.content url=post.url title=post.title author=post.author date=postDate number=postNumber images=post.images displayContent=true %}
+        </li>
+        {% assign postNumber = postNumber | minus: 1 %}
+    {% endfor %}
+</ul>

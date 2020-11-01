@@ -1,6 +1,6 @@
 ---
-layout: post
-categories: [Java Concurrency]
+layout: post-page
+categories: [Learn, Java Concurrency]
 ---
 
 ## Deadlocks

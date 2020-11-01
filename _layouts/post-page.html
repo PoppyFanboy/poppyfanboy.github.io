@@ -1,0 +1,23 @@
+---
+layout: blank-page
+---
+
+<!--kind of ugly but can't think of anything else-->
+<link rel="stylesheet" href="/assets/css/post-page.css">
+
+<div class="post-images-wrapper">
+    {% for image in page.images %}
+        {% capture imageTag %}
+            <div class="post-image-parent" style="margin-top: 20px;">
+                <a href="{{ image }}">
+                    <img class="post-image" src="{{ image }}">
+                </a>
+            </div>
+        {% endcapture %}
+        {{ imageTag }}
+    {% endfor %}
+</div>
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}

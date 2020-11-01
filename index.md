@@ -1,26 +1,16 @@
 ---
-layout: blank
-title: home
+title: pf
+layout: blank-page
 ---
 
 сюда лучше просто не смотреть
 
 <img src = "assets/images/1.png" style = "margin-left: 0px; margin-right: 0px; width:600px; height:auto; image-rendering: crisp-edges;">
 
-&gt; это же уровень восьмого класса в школке 
+> это же уровень восьмого класса в школке 
 
-&gt; зачем переписывать учебник, ты же можешь просто читать и запоминать
+> зачем переписывать учебник, ты же можешь просто читать и запоминать
 
-&gt; ты не знал этого, да
+> ты не знал этого, да
 
-&gt; просто зачем
-
-<h1>posts</h1>
-{% for category in site.categories %}
-  <h3>{{ category[0] }}</h3>
-  <ul>
-    {% for post in category[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+> просто зачем

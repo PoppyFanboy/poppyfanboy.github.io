@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: [Linear Algebra - Основные определения]
 ---
 

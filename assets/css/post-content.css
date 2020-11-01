@@ -1,0 +1,153 @@
+.post-content-wrapper img {
+    max-height: 15em;
+    max-width: 50%;
+    float: left;
+    margin: 0 2.5em 1.25em 0;
+}
+
+/* paragraphs */
+
+.post-content-wrapper p {
+    line-height: 1.25em;
+    margin: 0 0 1.25em 0;
+    padding-right: 10px;
+}
+
+/* clearfix */
+
+.post-content-wrapper p::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.post-content-wrapper p:last-child {
+    margin: 0;
+}
+
+/* headings */
+
+.post-content-wrapper h1 {
+    color: var(--header-color);
+    font-size: 32px;
+    margin: 0 0 0.5em 0;
+    font-weight: bold;
+}
+
+.post-content-wrapper h2 {
+    color: var(--header-color);
+    font-size: 28px;
+    margin: 0 0 0.25em 0;
+}
+
+.post-content-wrapper h3 {
+    color: var(--header-color);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 0.25em 0;
+}
+
+.post-content-wrapper h4,
+.post-content-wrapper h5,
+.post-content-wrapper h6 {
+    color: var(--header-color);
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* lists */
+
+.post-content-wrapper ul:not(.toc-submenu),
+.post-content-wrapper ol {
+    margin: 10px 0 1.25em 0;
+}
+
+.post-content-wrapper li {
+    margin-bottom: 10px;
+}
+
+.post-content-wrapper li:last-child {
+    margin-bottom: 0;
+}
+
+.post-content-wrapper ul:last-child,
+.post-content-wrapper ol:last-child {
+    margin-bottom: 0;
+}
+
+/* tables */
+
+table {
+    border-collapse: collapse;
+    margin: 0 10px 1.25em 0;
+}
+
+table:last-child {
+    margin-bottom: 0;
+}
+
+table, th, td {
+    border: 1px solid var(--table-border-color);
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* code */
+
+.highlight {
+    margin: 0 0 1.25em 0;
+}
+
+/* quotation */
+
+blockquote {
+    margin: 0 0 1.25em 0;
+}
+
+blockquote p {
+    color: var(--quote-color);
+}
+
+blockquote p::before {
+    content: ">";
+    display: inline;
+}
+
+/* Math */
+
+.MathJax[display="true"] {
+    display: block;
+    overflow-x: auto;
+    margin-right: 20px !important;
+    padding-bottom: 20px;
+    max-width: 100% !important;
+}
+
+/* TOC */
+
+.toc-submenu {
+    margin-top: 0.5em;
+}
+
+.toc {
+    margin-bottom: 1.25em;
+}
+
+.toc-item {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* for some reason inline-ed Mathjax does not have these attribute */
+.MathJax:not([display="true"]) {
+    font-size: 18px !important;
+}

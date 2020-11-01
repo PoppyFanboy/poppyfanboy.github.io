@@ -1,6 +1,6 @@
 ---
-layout: blank
 title: about
+layout: blank-page
 permalink: /about/
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: doges
-layout: blank
+layout: blank-page
 permalink: /doges/
 ---
-<h1>doges</h1>
+
+# doges

@@ -1,6 +1,6 @@
 ---
-layout: post
-categories: [Jekyll]
+layout: post-page
+categories: [Learn, Jekyll]
 ---
 
 ## Какие-то базовые штуки

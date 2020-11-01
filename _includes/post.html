@@ -1,0 +1,52 @@
+<div class="post-wrapper">
+
+    <div class="post-header-wrapper">
+        <span class="post-title">{{ include.title }}</span>
+        <span> &mdash; </span>
+
+        {% if include.author == null or include.author == "" %}
+            <span class="post-author">Аноним</span>
+        {% else %}
+            <span class="post-author">{{ include.author }}</span>
+        {% endif %}
+
+        <span class="post-date">{{ include.date }}</span>
+        <span class="post-number">№{{ include.number }}</span>
+        <a href="{{ include.url }}">Развернуть пост</a>
+    </div>
+
+    {% if include.images.size > 1 %}
+        <div class="post-images-wrapper">
+            {% for image in include.images %}
+                {% capture imageTag %}
+                    <div class="post-image-parent">
+                        <a href="{{ image }}">
+                            <img class="post-image" src="{{ image }}">
+                        </a>
+                    </div>
+                {% endcapture %}
+                {{ imageTag }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="post-content-wrapper">
+        {% if include.displayContent %}
+            {% if include.images.size == 1 %}
+                <a href="{{ include.images[0] }}">
+                    <img src="{{ include.images[0] }}">
+                </a>
+            {% endif %}
+        {% endif %}
+        
+        {% if include.displayToc %}
+            <h3>Оглавление</h3>
+            {% include toc.html html=include.content submenu_class="toc-submenu" class="toc" anchor_class="toc-item" baseurl=include.categoryUrl%}
+        {% endif %}
+        
+        {% if include.displayContent %}
+            {{ include.content }}
+        {% endif %}
+    </div>
+
+</div>

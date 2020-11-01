@@ -1,6 +1,6 @@
 ---
-layout: post
-categories: [Java Collections]
+layout: post-page
+categories: [Learn, Java Collections]
 ---
 
 *core java — part `I`, chapters 9.4–9.6* 

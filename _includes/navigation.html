@@ -1,12 +1,22 @@
-<nav>
-    {% assign navHrefs = "" | split: "" %}
-    {% for item in site.data.navigation %}
-        {% capture link %}
-            <a href="{{ item.link }}" {% if page.url == item.link %}class="navigation_selected"{% endif %}>{{ item.name }}</a>
-        {% endcapture %}
-        {% assign navHrefs = navHrefs | push: link %}
-    {% endfor %}
+<div class="header-menu">
+    <nav>
+        {% assign navHrefs = "" | split: "" %}
+        {% for item in site.data.navigation %}
+            {% capture link %}
+                <a href="{{ item.link }}" {% if page.url == item.link %}class="navigation-selected"{% endif %}>{{ item.name }}</a>
+            {% endcapture %}
+            {% assign navHrefs = navHrefs | push: link %}
+        {% endfor %}
 
-    [ {{ navHrefs | join: " | " }} ]
-</nav>
+        [ {{ navHrefs | join: " | " }} ]
+    </nav>
 
+    <select name="Выбор темы" id="theme-selector" onchange="changeTheme(value);">
+        <option value="vanilla">Стандартная (розовый)</option>
+        <option value="dark">Тёмная</option>
+    </select>
+
+    <script>
+        document.getElementById("theme-selector").value = currentTheme;
+    </script>
+</div>

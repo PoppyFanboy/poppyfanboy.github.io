@@ -1,6 +1,6 @@
 ---
-layout: post
-categories: [Algorithms]
+layout: post-page
+categories: [Learn, Algorithms]
 ---
 
 ## Symbol Tables and Binary Trees

@@ -4,8 +4,14 @@
 - name: doges
   link: /doges/
 
+- name: learn 
+  link: /learn/
+
 - name: cates
   link: /cates/
+
+- name: random
+  link: /random/
 
 - name: about
   link: /about/

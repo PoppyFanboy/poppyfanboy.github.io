@@ -1,6 +1,7 @@
 ---
 title: cates
-layout: blank
+layout: blank-page
 permalink: /cates/
 ---
-<h1>cates</h1>
+
+# cates
