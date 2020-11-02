@@ -1,5 +1,5 @@
 body {
-    width: fit-content;
+    max-width: 100%;
     overflow-x: auto;
     font-family: Verdana, sans-serif;
     font-size: 18px;
@@ -11,7 +11,8 @@ body {
 }
 
 .content-wrapper {
-    margin: 0 20px 20px 20px;
+    margin: 0 0 20px 0;
+    padding: 0 20px 0 20px;
 }
 
 a {
@@ -44,10 +45,9 @@ nav {
     font-style: italic;
 }
 
-.show-skipped-posts-button {
+.text-button {
     color: var(--href-color);
     text-decoration: underline;
-    font-style: italic;
     cursor: pointer;
 }
 

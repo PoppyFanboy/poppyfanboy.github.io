@@ -14,7 +14,10 @@
     }
 </style>
 
-<div class="post-wrapper">
+{% assign postId = include.title | append: include.date | replace: " ", "" | replace: ",", "-" %}
+{% assign buttonId = postId | append: "-button" %}
+
+<div class="post-wrapper" id="{{ postId }}">
 
     <div class="post-header-wrapper">
         <span class="post-title">{{ include.title }}</span>
@@ -29,6 +32,8 @@
         <span class="post-date">{{ include.date }}</span>
         <span class="post-number">№{{ include.number }}</span>
         <a href="{{ include.url }}">Развернуть пост</a>
+        <span> | </span>
+        <span class="text-button" id="{{ buttonId }}">Фокус на посте</span>
     </div>
 
     {% if include.images.size > 1 %}
@@ -64,5 +69,28 @@
             {{ include.content }}
         {% endif %}
     </div>
+
+    <script>
+        (function() {
+            const focusButton = document.getElementById("{{ buttonId }}");
+
+            document.getElementById("{{ buttonId }}").addEventListener("click", function() {
+                const contentWrapper = document.getElementsByClassName("content-wrapper")[0];
+                const currentPost = document.getElementById("{{ postId }}");
+
+                if (contentWrapper.style.visibility == "hidden") {
+                    contentWrapper.style.visibility = "visible";
+                    currentPost.style.visibility = "inherit";
+                    focusButton.style.backgroundColor = "";
+                    focusButton.style.color = "";
+                } else {
+                    contentWrapper.style.visibility = "hidden";
+                    currentPost.style.visibility = "visible";
+                    focusButton.style.backgroundColor = "var(--nav-selected-bg-color)";
+                    focusButton.style.color = "var(--nav-selected-color)";
+                }
+            });
+        })();
+    </script>
 
 </div>

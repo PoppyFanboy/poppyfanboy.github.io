@@ -34,7 +34,7 @@ permalink: /learn/
 
             {% assign postsLeft = posts.size | minus: 2 %}
             {% if postsLeft > 0 %}
-                <span class="skipped-posts-count" id="{{ categoryNameNoSpaces | append: "-skipped-count" }}">(Пропущено {{ postsLeft }} постов. <span class="show-skipped-posts-button" id="{{ categoryNameNoSpaces | append: "-show-skipped" }}">Посмотреть все посты.</span>)</span>
+                <span class="skipped-posts-count" id="{{ categoryNameNoSpaces | append: "-skipped-count" }}">(Пропущено {{ postsLeft }} постов. <span class="text-button" id="{{ categoryNameNoSpaces | append: "-show-skipped" }}">Посмотреть все посты.</span>)</span>
                 <script>
                     document.getElementById("{{ categoryNameNoSpaces | append: "-show-skipped" }}").addEventListener("click", function() {
                         const hiddenPosts = document.querySelectorAll(".hidden-post.{{ categoryNameNoSpaces }}");
