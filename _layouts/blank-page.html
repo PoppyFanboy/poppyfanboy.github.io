@@ -11,19 +11,12 @@
         <link rel="stylesheet" href="/assets/css/color-themes.css">
         
         <script>
-            const themesToNames = {
-                "vanilla" : "Стандартная (розовый)",
-                "dark" : "Тёмная"
-            };
-            
-            var currentTheme = localStorage.getItem("theme");
-
             function changeTheme(theme) {
-                currentTheme = theme;
                 document.getElementsByTagName("html")[0].setAttribute("data-theme", theme);
                 localStorage.setItem("theme", theme);
             }
 
+            var currentTheme = localStorage.getItem("theme");
             if (currentTheme !== null) {
                 changeTheme(currentTheme);
             } else {

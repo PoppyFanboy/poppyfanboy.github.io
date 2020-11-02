@@ -9,7 +9,7 @@
     {% for post in posts %}
         <li>
             {% assign postDate = post.date | date: "%b %d, %Y" %}
-            {% include post.html content=post.content url=post.url title=post.title author=post.author date=postDate number=postNumber images=post.images displayContent=true %}
+            {% include post.html content=post.content url=post.url title=post.title author=post.author date=postDate number=postNumber images=post.images displayContent=true displayToc=true %}
         </li>
         {% assign postNumber = postNumber | minus: 1 %}
     {% endfor %}

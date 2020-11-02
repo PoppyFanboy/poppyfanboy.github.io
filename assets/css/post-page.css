@@ -4,7 +4,7 @@ body {
 
 .content-wrapper {
     max-width: 1100px;
-    margin-left: 20px;
+    margin: 0 auto;
 }
 
 img {
@@ -15,7 +15,18 @@ img {
     margin-right: auto;
 }
 
-h1, h2, h3 {
+:is(h1, h2, h3, h4, h5, h6)::before {
+    display: block;
+    content: " ";
+    margin-top: -50px;
+    height: 50px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3 {
     margin-top: 50px;
 }
 
@@ -24,15 +35,24 @@ h3 {
 }
 
 h2 {
-    font-size: 32pt;
+    font-size: 24pt;
 }
 
-.MathJax {
-    font-size: 16pt;
+h1 {
+    font-size: 28pt;
 }
 
-p, ul, li, script {
-    margin-bottom: 1.5em;
-    font-size: 16pt;
+.MathJax[display="true"],
+.highlight {
+    overflow-x: auto;
+    margin-right: 20px !important;
+    padding-bottom: 20px;
+}
+
+p,
+ul,
+li,
+script {
+    font-size: 14pt;
     line-height: 1.5em;
 }

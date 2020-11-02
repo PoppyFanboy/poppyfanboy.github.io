@@ -5,7 +5,7 @@ layout: blank-page
 
 сюда лучше просто не смотреть
 
-<img src = "assets/images/1.png" style = "margin-left: 0px; margin-right: 0px; width:600px; height:auto; image-rendering: crisp-edges;">
+<img src = "assets/images/1.png" class="front-image pixelated-image">
 
 > это же уровень восьмого класса в школке 
 

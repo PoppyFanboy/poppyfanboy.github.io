@@ -118,6 +118,10 @@ th {
 
 .highlight {
     margin: 0 0 1.25em 0;
+    overflow-x: auto;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    max-width: 100%;
 }
 
 /* quotation */
@@ -135,16 +139,6 @@ blockquote p::before {
     display: inline;
 }
 
-/* Math */
-
-.MathJax[display="true"] {
-    display: block;
-    overflow-x: auto;
-    margin-right: 20px !important;
-    padding-bottom: 20px;
-    max-width: 100% !important;
-}
-
 /* TOC */
 
 .toc-submenu {
@@ -158,9 +152,4 @@ blockquote p::before {
 .toc-item {
     text-decoration: none;
     color: var(--text-color);
-}
-
-/* for some reason inline-ed Mathjax does not have these attribute */
-.MathJax:not([display="true"]) {
-    font-size: 18px !important;
 }
