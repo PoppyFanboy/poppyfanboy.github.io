@@ -5,7 +5,34 @@ permalink: /learn/
 ---
 
 <div>
-    {% for mainCategory in site.learn-categories %}
+    {% assign sortedCategories = "" | split: "" %}
+    {% comment %}
+        Posts are sorted by their dates by default.
+    {% endcomment %}
+    {% for post in site.categories.Learn %}
+        {% assign currentCategoryName = post.categories[1] %}
+        {% assign alreadyTraversed = false %}
+        {% for traversedCategory in sortedCategories %}
+            {% if traversedCategory.name == currentCategoryName %}
+                {% assign alreadyTraversed = true %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+
+        {% if alreadyTraversed %}
+            {% continue %}
+        {% endif %}
+
+        {% for category in site.learn-categories %}
+            {% if category.name == currentCategoryName %}
+                {% assign categoryObject = category %}
+            {% endif %}
+        {% endfor %}
+
+        {% assign sortedCategories = sortedCategories | push: categoryObject %}
+    {% endfor %}
+
+    {% for mainCategory in sortedCategories %}
         <ul class="posts-list">
             <div class="category-header">
                 <h3 class="category-header-name">{{ mainCategory.name }}</h3>
