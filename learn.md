@@ -11,15 +11,9 @@ permalink: /learn/
     {% endcomment %}
     {% for post in site.categories.Learn %}
         {% assign currentCategoryName = post.categories[1] %}
-        {% assign alreadyTraversed = false %}
-        {% for traversedCategory in sortedCategories %}
-            {% if traversedCategory.name == currentCategoryName %}
-                {% assign alreadyTraversed = true %}
-                {% break %}
-            {% endif %}
-        {% endfor %}
 
-        {% if alreadyTraversed %}
+        {% assign sortedCategoriesNames = sortedCategories | map: "name" %}
+        {% if sortedCategoriesNames contains currentCategoryName %}
             {% continue %}
         {% endif %}
 
@@ -38,12 +32,8 @@ permalink: /learn/
                 <h3 class="category-header-name">{{ mainCategory.name }}</h3>
                 <a class="category-header-link" href="{{ mainCategory.url }}">Перейти к категории</a>
             </div>
-            {% for category in site.categories %}
-                {% if category[0] == mainCategory.name %}
-                    {% assign posts = category[1] %}
-                {% endif %}
-            {% endfor %}
 
+            {% assign posts = site.categories[mainCategory.name] %}
             {% assign categoryNameNoSpaces = mainCategory.name | replace: " ", "" %}
             {% assign count = 0 %}
             {% for post in posts %}

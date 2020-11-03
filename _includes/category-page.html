@@ -1,10 +1,5 @@
 <ul class="posts-list">
-    {% for category in site.categories %}
-        {% if category[0] == include.categoryName %}
-            {% assign posts = category[1] %}
-        {% endif %}
-    {% endfor %}
-
+    {% assign posts = site.categories[include.categoryName] %}
     {% assign postNumber = posts.size %}
     {% for post in posts %}
         <li>

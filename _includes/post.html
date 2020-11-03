@@ -39,14 +39,11 @@
     {% if include.images.size > 1 %}
         <div class="post-images-wrapper">
             {% for image in include.images %}
-                {% capture imageTag %}
-                    <div class="post-image-parent">
-                        <a href="{{ image }}">
-                            <img class="post-image" src="{{ image }}">
-                        </a>
-                    </div>
-                {% endcapture %}
-                {{ imageTag }}
+                <div class="post-image-parent">
+                    <a href="{{ image }}">
+                        <img class="post-image" src="{{ image }}">
+                    </a>
+                </div>
             {% endfor %}
         </div>
     {% endif %}
