@@ -17,6 +17,17 @@
     </select>
 
     <script>
+        function changeTheme(theme) {
+            document.getElementsByTagName("html")[0].setAttribute("data-theme", theme);
+            localStorage.setItem("theme", theme);
+        }
+
+        let currentTheme = localStorage.getItem("theme");
         document.getElementById("theme-selector").value = currentTheme;
+        if (currentTheme !== null) {
+            changeTheme(currentTheme);
+        } else {
+            currentTheme = "vanilla";
+        }
     </script>
 </div>
